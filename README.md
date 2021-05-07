@@ -4,7 +4,7 @@ This is a stock web application developed in Flask , Bootstrap while consuming a
 # To run the app activate the virtual enviroment
 source venv/bin/activate
 
-# Pip install requests
+# pip install -r requirements.txt
 
 # flask run 
 
