@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<center><h1>Stocks Exchange App</h1></center>
+<br/>
+<div class="container">
+	<div class="child" style="margin: auto;width: 50%; border: 3px solid #007bff; padding: 10px;">
+<form method="POST" action="/details">
+	<div class="form-group">
+    <center>STOCK NAME </center> <input class="form-control" type="text" name="ticker" required>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Search Stock</button>
+<!--     <input type="submit"> -->
+</div>
+</form>
+</div>
+</div>
+
+{% endblock %}
+
+

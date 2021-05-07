@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- {{company}} -->
+<center><h1>Stock History</h1></center>
+<br>
+<form>
+  <div class="form-row">
+  	<div class="form-group col-md-4">
+      <label for="inputZip">STOCK SYMBOL:</label>
+      <input type="text" class="form-control" value="{{company['Symbol']}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">ASSET TYPE:</label>
+      <input type="text" class="form-control"  value="{{company['AssetType']}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">COMPANY NAME:</label>
+      <input type="text" class="form-control" value="{{company['Name']}}">
+    </div>
+  </div>
+ <div class="form-row">
+  	<div class="form-group col-md-4">
+      <label for="inputZip">EXCHANGE:</label>
+      <input type="text" class="form-control" value="{{company['Exchange']}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">CURRENCY:</label>
+      <input type="text" class="form-control" value="{{company['Currency']}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">COUNTRY:</label>
+      <input type="text" class="form-control" value="{{company['Country']}}">
+    </div>
+  </div>
+   <div class="form-row">
+  	<div class="form-group col-md-4">
+      <label for="inputZip">SECTOR:</label>
+      <input type="text" class="form-control" value="{{company['Sector']}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">INDUSTRY:</label>
+      <input type="text" class="form-control" value="{{company['Industry']}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">ADDRESS:</label>
+      <input type="text" class="form-control" value="{{company['Address']}}">
+    </div>
+  </div>
+</form>
+<br>
+<div class="jumbotron">
+  <h1 class="display-4">Descreiption of {{company['Symbol']}}</h1>
+  <p class="lead">{{company['Description']}}</p>
+  <hr class="my-4">
+</div>
+{% endblock%}

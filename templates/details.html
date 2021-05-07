@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{json_object['01. symbol']}}</h1>
+    <p class="lead">Here we have a look at the stock prices, the thier low and high values of the day.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{json_object['01. symbol']}}</div>
+  <div class="card-body">
+  <label>High:
+    <p class="card-text">{{json_object['03. high']}}</p>
+</label>
+<br>
+<label>Low:
+    <p class="card-text">{{json_object['04. low']}}</p>
+</label>
+<br>
+<label>Open:
+    <p class="card-text">{{json_object['02. open']}}</p>
+</label>
+  </div>
+</div>
+</div>
+  <div class="col-sm-4">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{json_object['01. symbol']}}</div>
+  <div class="card-body">
+  <label>Price:
+    <p class="card-text">{{json_object['05. price']}}</p>
+</label>
+<br>
+<label>Volume:
+    <p class="card-text">{{json_object['06. volume']}}</p>
+</label>
+<br>
+<label>Latest Trading Day:
+    <p class="card-text">{{json_object['07. latest trading day']}}</p>
+</label>
+  </div>
+</div>
+</div>
+  <div class="col-sm-4">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{json_object['01. symbol']}}</div>
+  <div class="card-body">
+  <label>Previous Close:
+    <p class="card-text">{{json_object['08. previous close']}}</p>
+</label>
+<br>
+<label>Change:
+    <p class="card-text">{{json_object['09. change']}}</p>
+</label>
+<br>
+<label>Percentage Change:
+    <p class="card-text">{{json_object['10. change percent']}}</p>
+</label>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<br/>
+<div class="container">
+	<div class="child" style="margin: auto;width: 50%; border: 3px solid #007bff; padding: 10px;">
+<form method="POST" action="/history">
+	<div class="form-group">
+    <center>STOCK HISTORY </center> <input class="form-control" type="text" value="{{json_object['01. symbol']}}" name="ticker" required>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Search History</button>
+<!--     <input type="submit"> -->
+</div>
+</form>
+</div>
+</div>
+
+{% endblock %}
+
+
